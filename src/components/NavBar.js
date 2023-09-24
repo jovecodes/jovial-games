@@ -11,10 +11,10 @@ function JovialNavbar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/#">Home</Nav.Link>
                         <Nav.Link href="/#/games">Games</Nav.Link>
                         <Nav.Link href="/#/engine">Engine</Nav.Link>
                         <Nav.Link href="/#/music">Music</Nav.Link>
+                        <Nav.Link href="/#/jove">Jove</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
