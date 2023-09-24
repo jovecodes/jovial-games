@@ -1,39 +1,29 @@
 import React from 'react';
 import './App.css';
+import './styles/bootstrap.css'
+import JovialNavbar from './components/NavBar'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import 'bootstrap/dist/css/bootstrap.min.css'
-
-function JovialNavbar() {
-    return (
-        <Navbar expand="lg" className="bg-body-tertiary">
-            <Container>
-                <Navbar.Brand href="home">Jovial</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="home">Home</Nav.Link>
-                        <Nav.Link href="games">Games</Nav.Link>
-                        <Nav.Link href="engine">Engine</Nav.Link>
-                        <Nav.Link href="music">Music</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-    );
-}
+import Home from './components/Home';
+// import Layout from './components/Layout';
+import NoPage from './components/NoPage';
+import Engine from './components/Engine';
+import Games from './components/Games';
 
 function App() {
     return (
         <div className="App">
             <JovialNavbar />
-            <header className="App-header">
-                <h1>
-                    Jovial Games
-                </h1>
-            </header>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />}>
+                        <Route index element={<Home />} />
+                        <Route path="engine" element={<Engine />} />
+                        <Route path="games" element={<Games />} />
+                        <Route path="*" element={<NoPage />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 }
