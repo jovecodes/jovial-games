@@ -10,6 +10,7 @@ import Home from './components/Home';
 import NoPage from './components/NoPage';
 import Engine from './components/Engine';
 import Games from './components/Games';
+import Music from './components/Music';
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/" element={<Home />}></Route>
                 <Route path="engine" element={<Engine />} />
                 <Route path="games" element={<Games />} />
+                <Route path="music" element={<Music />} />
                 <Route path="*" element={<NoPage />} />
             </Routes>
         </>
