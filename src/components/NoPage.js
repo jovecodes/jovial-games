@@ -3,7 +3,7 @@ function NoPage() {
         <div>
             <header className="App-header">
                 <h1>
-                    No Page :(
+                    404. No page found :(
                 </h1>
             </header>
         </div>

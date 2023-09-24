@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import './styles/bootstrap.css'
 import JovialNavbar from './components/NavBar'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { BrowserRouter, Routes, Route, Outlet, Link } from "react-router-dom";
 
 import Home from './components/Home';
 // import Layout from './components/Layout';
@@ -12,19 +13,15 @@ import Games from './components/Games';
 
 function App() {
     return (
-        <div className="App">
+        <BrowserRouter>
             <JovialNavbar />
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Home />}>
-                        <Route index element={<Home />} />
-                        <Route path="engine" element={<Engine />} />
-                        <Route path="games" element={<Games />} />
-                        <Route path="*" element={<NoPage />} />
-                    </Route>
-                </Routes>
-            </BrowserRouter>
-        </div>
+            <Routes>
+                <Route index element={<Home />} />
+                <Route path="engine" element={<Engine />} />
+                <Route path="games" element={<Games />} />
+                <Route path="*" element={<NoPage />} />
+            </Routes>
+        </BrowserRouter >
     );
 }
 
