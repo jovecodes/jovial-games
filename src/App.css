@@ -1,5 +1,11 @@
 body {
   background-color: #32302f;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .App {
@@ -17,9 +23,47 @@ body {
   }
 }
 
+.Jovial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #32302f;
+  color: #d4be98;
+  min-height: 100vh;
+}
+
+.JovailP {
+  background-color: #32302f;
+  color: #d4be98;
+  margin: 5%;
+  padding: 5%;
+}
+
+.JovialBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #32302f;
+  width: 70%;
+  color: #d4be98;
+}
+
+.JovialSection {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  background-color: inherit;
+  color: inherit;
+  width: 100%;
+  padding-bottom: 10vh;
+}
+
 .App-header {
   background-color: #32302f;
-  min-height: 100vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +72,7 @@ body {
   color: #d4be98;
 }
 
-.App-link {
+.link {
   color: #7daea3;
 }
 

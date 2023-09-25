@@ -1,9 +1,9 @@
-function Home() {
+function EngineChangelog() {
     return (
         <div className="Jovial">
             <header className="App-header">
                 <h1>
-                    Jovial
+                    EngineChangelog
                 </h1>
             </header>
         </div>
@@ -11,4 +11,5 @@ function Home() {
 
 }
 
-export default Home;
+export default EngineChangelog;
+

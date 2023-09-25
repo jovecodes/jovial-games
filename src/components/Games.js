@@ -1,6 +1,6 @@
 function Games() {
     return (
-        <div>
+        <div className="Jovial">
             <header className="App-header">
                 <h1>
                     Games
